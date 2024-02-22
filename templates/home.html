@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVI - Virtual Interview Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            {% load static %}
+            background-image: url('{% static 'logo.png' %}');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative; /* Make the body a positioning context */
+        }
+        
+        .overlay {
+            position: absolute; /* Position the overlay relative to the body */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            /* Adjust opacity (0.5 in this case) as needed */
+        }
+        
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo img {
+            max-width: 200px;
+            width: 100%; /* Ensure the image fills its container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove any extra space below the image */
+            margin: 0 auto; /* Center the image horizontally */
+        }
+        
+        .header-icon {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            /* Add any additional styles */
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 50px 0;
+            color: #fff; /* Change text color to white for better visibility */
+        }
+        
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        {% load static %}
+        <img src="{% static 'logo.png' %}" alt="VIVI Icon" class="header-icon">
+    </div>
+</header>
+
+<div class="welcome-section">
+    <h1>Welcome to VIVI - Virtual Interview Platform</h1>
+    <p>Revolutionizing the way interviews are conducted.</p>
+</div>
+
+<div class="buttons">
+    <a href="company.html" class="btn">For Companies</a>
+    <a href="candidate.html" class="btn">For Candidates</a>
+</div>
+
+</body>
+</html>
